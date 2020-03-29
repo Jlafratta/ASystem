@@ -1,53 +1,75 @@
 <html>
-    <head>
-        <title>AegirSystem</title>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php
+    $parameters = array();
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    if ($_SERVER['REQUEST_METHOD'] == "POST")
+        $parameters = $_POST;
+    else
+        $parameters = $_GET;
+?>
 
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-    </head>
+    <?php 
+        include_once('header.php');
+        $section = "Paciente";
+        include_once('nav.php');
+    ?>
+
     <body class="bgdark">
 
-        <nav class="navbar  bg-dark navbar-dark ">
+            <div class="container rounded my-3 ">
 
-            <span class="navbar-text">
-                <a href="https://www.aegirsystem.com/">Aegir System</a>
-            </span>
-
-            <span class="navbar-text">
-                Nueva reunión
-            </span>
-
-            <button type="button" class="btn btn-outline-secondary">Salir</button>
-
-        </nav>
-        
-        <div class="container rounded my-3 ">
-
-        <aside>
-            <div class="container rounded p-3 my-3 bg-gray">
-                <h4>Pacientes</h4>
-                <div class="container inner rounded bg-white">
-
+            <aside>
+                <div class="container rounded p-3 my-3 bg-white">
+                    <span class="titlespan">Pacientes</span>
+                    
+                    <hr>
+                    <div class="container inner rounded bg-white">
+                        <br>
+                        <?php include_once('table.php') ?>
+                    </div>
                 </div>
-            </div>
-        </aside>
+            </aside>
 
-        <section>
-            <div class="container rounded p-3 my-3 bg-gray">
-                <form action="user_panel.php" method="post">
-                    <button type="submit" class="btn btn-primary">Volver</button>
-                </form>
+            <section>
+                <div class="container rounded p-3 my-3 bg-white">
+               
+                    
+                    <span class="titlespan"><?php echo $parameters['client']; ?> </span>
+                    <button type="submit" class="btn btn-primary float-left" onclick="location.href='user_panel.php'"><<</button>
+                    <hr>
+                    <div class="container inner rounded ">
+                        <br>
+                        <h4>Crear nueva reunion</h4><br>
+                    <form action="pacient.php" method="POST">
+                    <table class="table table-striped table-hover bg-white">
+                         <thead class="thead">
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Dia</th>
+                            <th scope="col">Inicio</th>
+                            <th scope="col">Fin</th>
+                            <th scope="col"></th>
+                            </tr>
+                        </thead> 
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <th><input type="date"></th>
+                            <td><input type="time"></td>
+                            <td><input type="time"></td>
+                            <td><button type="submit" class="btn btn-sm btn-outline-secondary float-right" name="client" value=<?php echo "'".$parameters['client']."'" ?>>Crear</button></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    </form>
+                    </div>
+                </div>
+            </section>
+            
             </div>
-        </section>
-        
-        </div>
+            
         
 
     </body>

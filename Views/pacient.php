@@ -1,9 +1,17 @@
 <html>
 
+<?php
+    $parameters = array();
+
+    if ($_SERVER['REQUEST_METHOD'] == "POST")
+        $parameters = $_POST;
+    else
+        $parameters = $_GET;
+?>
+
     <?php 
-    
         include_once('header.php');
-        $section = "Inicio";
+        $section = "Paciente";
         include_once('nav.php');
     ?>
 
@@ -14,49 +22,57 @@
             <aside>
                 <div class="container rounded p-3 my-3 bg-white">
                     <span class="titlespan">Pacientes</span>
+                    
                     <hr>
                     <div class="container inner rounded bg-white">
                         <br>
-                    <?php include_once('table.php') ?>
+                        <?php include_once('table.php') ?>
                     </div>
                 </div>
             </aside>
 
             <section>
                 <div class="container rounded p-3 my-3 bg-white">
-               
-                    
-                    <span class="titlespan"><?php echo(date("l d/m",time())); ?> </span>
-                    
+
+                    <button type="submit" class="btn btn-primary float-left" onclick="location.href='user_panel.php'"><<</button>
+                    <form action="new_meeting.php">
+                    <span class="titlespan"><?php echo $parameters['client']; ?> </span>
+                    <button type="submit" class="btn btn-primary float-right" name="client" value=<?php echo "'".$parameters['client']."'" ?>>Nueva reunion</button>
+                    </form>
                     <hr>
                     <div class="container inner rounded ">
                         <br>
+                        <h4>Reuniones</h4><br>
                     <table class="table table-striped table-hover bg-white">
-                        <thead class="thead-dark">
+                         <thead class="thead">
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Paciente</th>
-                            <th scope="col">Hora</th>
+
+                            <th scope="col">Inicio</th>
+                            <th scope="col">Fin</th>
                             <th scope="col"></th>
                             </tr>
-                        </thead>
+                        </thead> 
                         <tbody>
                             <tr>
                             <th scope="row">1</th>
-                            <td>Bazan, Martin</td>
+
                             <td>12:00</td>
+                            <td>13:30</td>
                             <td><button type="submit" class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
                             </tr>
                             <tr>
                             <th scope="row">2</th>
-                            <td>Costas, Sebastian</td>
+
                             <td>16:00</td>
+                            <td>17:00</td>
                             <td><button type="submit" class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
                             </tr>
                             <tr>
                             <th scope="row">3</th>
-                            <td>Alvarez, Jose</td>
+
                             <td>18:00</td>
+                            <td>19:00</td>
                             <td><button type="submit" class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
                             </tr>
                         </tbody>
