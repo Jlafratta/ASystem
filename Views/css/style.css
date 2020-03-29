@@ -1,112 +1,96 @@
-body, html {
+body,
+html {
     height: 100%;
-  }
-  
-  .bg { 
+}
+
+.bg {
     /* The image used */
     background-image: url("https://images.unsplash.com/photo-1486049125644-f35e226a5e14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-  
     /* Full height */
-    height: 100%; 
-  
+    height: 100%;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
 
-  .bgdark {
+.bgdark {
     /* The image used */
-    background-image: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url("https://images.unsplash.com/photo-1486049125644-f35e226a5e14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-  
-
-  }
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1486049125644-f35e226a5e14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+}
 
 
-
-  /* Made with love by Mutiullah Samim*/
+/* Made with love by Mutiullah Samim*/
 
 @import url('https://fonts.googleapis.com/css?family=Numans');
-
-
-.contcenter{
-height: 100%;
-align-content: center;
+.contcenter {
+    height: 100%;
+    align-content: center;
 }
 
-.card{
-height: 340px;
-margin-top: auto;
-margin-bottom: auto;
-width: 400px;
-background-color: rgba(0,0,0,0.5) !important;
+.card {
+    height: 340px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.social_icon span:hover{
-color: white;
-cursor: pointer;
+.social_icon span:hover {
+    color: white;
+    cursor: pointer;
 }
 
-.card-header h3{
-color: white;
+.card-header h3 {
+    color: white;
 }
 
-.input-group-prepend span{
-width: 50px;
-background-color: #1565C0;
-color: black;
-border:0 !important;
+.input-group-prepend span {
+    width: 50px;
+    background-color: #1565C0;
+    color: black;
+    border: 0 !important;
 }
 
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
-
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
 }
 
-.remember{
-color: white;
-font-size: 14px;
-
+.remember {
+    color: white;
+    font-size: 14px;
 }
 
-.remember input
-{
-width: 15px;
-height: 15px;
-margin-left: 15px;
-margin-right: 5px;
-margin-top: 3px;
-
+.remember input {
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-top: 3px;
 }
 
-.login_btn{
-color: black;
-background-color: #1565C0;
-width: 80%;
-
-margin-right: 10%;
-margin-left: 10%;
-
+.login_btn {
+    color: black;
+    background-color: #1565C0;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
-.login_btn:hover{
-color: black;
-background-color: white;
+.login_btn:hover {
+    color: black;
+    background-color: white;
 }
 
-.links{
-color: white;
+.links {
+    color: white;
 }
 
-.links a{
-margin-left: 4px;
+.links a {
+    margin-left: 4px;
 }
+
 
 /* user_panel */
 
@@ -120,39 +104,44 @@ margin-left: 4px;
 }
 
 .titlespan {
-  font-size: 1.5rem;
-  margin-left: 10px;
+    font-size: 1.5rem;
+    margin-left: 10px;
 }
+
 
 /* containter */
 
 .inner {
-  height: 91%;
-  overflow-y:scroll
-  
+    height: 91%;
+    overflow-y: scroll
 }
 
 .rounded {
-    border-radius:.25rem!important
+    border-radius: .25rem!important
 }
 
 .bg-gray {
     background-color: hsl(0, 0%, 93%);
 }
 
-aside{
+aside {
     float: left;
     width: 30%;
     height: 450px;
 }
 
-.tabBtn {
-  line-height: 0;
+.asideMeeting {
+    float: left;
+    width: 30%;
+    height: 400px;
 }
 
-section{
+.tabBtn {
+    line-height: 0;
+}
+
+section {
     float: right;
     width: 69%;
     height: 450px;
 }
-
