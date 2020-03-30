@@ -34,9 +34,10 @@
             <section>
                 <div class="container rounded p-3 my-3 bg-white">
                
-                    
+                    <form action="pacient.php" method="post">
                     <span class="titlespan"><?php echo $parameters['client']; ?> </span>
-                    <button type="submit" class="btn btn-primary float-left" onclick="location.href='user_panel.php'"><<</button>
+                    <button type="submit" class="btn btn-primary float-left" name="client" value=<?php echo "'".$parameters['client']."'" ?>><<</button>
+                    </form>
                     <hr>
                     <div class="container inner rounded ">
                         <br>
@@ -55,9 +56,9 @@
                         <tbody>
                             <tr>
                             <th scope="row">1</th>
-                            <th><input type="date"></th>
-                            <td><input type="time"></td>
-                            <td><input type="time"></td>
+                            <th><input type="date" required></th>
+                            <td><input type="time" required></td>
+                            <td><input type="time" required></td>
                             <td><button type="submit" class="btn btn-sm btn-outline-secondary float-right" name="client" value=<?php echo "'".$parameters['client']."'" ?>>Crear</button></td>
                             </tr>
                             

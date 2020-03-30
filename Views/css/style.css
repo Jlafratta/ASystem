@@ -108,12 +108,62 @@ input:focus {
     margin-left: 10px;
 }
 
+.devtext {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;;
+}
+
 
 /* containter */
 
+section {
+    float: right;
+    width: 69%;
+    height: 450px; 
+}
+
+aside {
+    float: left;
+    width: 30%;
+    height: 450px; 
+}
+
+.sectionDev {
+    
+    height: 620px;
+}
+
+.asideDev {
+    height: 620px;
+}
+
 .inner {
+
     height: 91%;
     overflow-y: scroll
+}
+.inner::-webkit-scrollbar {
+    display: none;
+}
+
+
+.innerNoScroll {
+    height: 91%;
+}
+
+.extraDev {
+    
+    height: 300px;
+}
+
+.recipe {
+    height: 200px;
+    overflow-y: scroll
+}
+
+.recipe::-webkit-scrollbar {
+    display: none;
 }
 
 .rounded {
@@ -124,24 +174,7 @@ input:focus {
     background-color: hsl(0, 0%, 93%);
 }
 
-aside {
-    float: left;
-    width: 30%;
-    height: 450px;
-}
-
-.asideMeeting {
-    float: left;
-    width: 30%;
-    height: 400px;
-}
-
 .tabBtn {
     line-height: 0;
 }
 
-section {
-    float: right;
-    width: 69%;
-    height: 450px;
-}

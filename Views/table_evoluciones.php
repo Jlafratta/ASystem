@@ -1,28 +1,16 @@
-
-<table class="table  table-hover bg-white">
+<form action="devolucion.php" action="post">
+<table class="table  table-hover text-center bg-white">
                         
     <tbody>
-        
+
+    <?php for($x=1;$x<21;$x++){?>
+
         <tr>
-        <td><button type="submit" name="client" value="Alvarez, Jose" class="btn tabBtn btn-link">Alvarez, Jose</button></td>
-        </tr>
-        <tr>
-        <td><button type="submit" name="client" value="Bazan, Martin" class="btn tabBtn btn-link">Bazan, Martin</button></td>
-        </tr>
-        <tr>
-        <td><button type="submit" name="client" value="Conti, Victoria" class="btn tabBtn btn-link">Conti, Victoria</button></td>
-        </tr>
-        <tr>
-        <td><button type="submit" name="client" value="Corvalan, Martina" class="btn tabBtn btn-link">Corvalan, Martina</button></td>
-        </tr>
-        <tr>
-        <td><button type="submit" name="client" value="Costas, Sebastian" class="btn tabBtn btn-link">Costas, Sebastian</button></td>
-        </tr>
-        <tr>
-        <td><button type="submit" name="client" value="Crespo, Jesus" class="btn tabBtn btn-link">Crespo, Jesus</button></td>
-        </tr>
+        <td><button type="submit" name="client" value=<?php echo "'".$parameters['client']."'"; ?> class="btn tabBtn btn-link">Devolucion <?php echo $x ?></button></td>
         </tr>
 
+    <?php } ?>
+        
     </tbody>
 </table>
 </form>

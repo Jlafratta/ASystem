@@ -1,7 +1,7 @@
 <nav class="navbar  bg-dark navbar-dark ">
 
             <span class="navbar-text">
-                <a href="https://www.aegirsystem.com/">Aegir System</a>
+                <a href="https://www.aegirsystem.com/">Aegir System &copy 2020</a>
             </span>
 
             <span class="navbar-text">

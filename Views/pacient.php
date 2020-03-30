@@ -54,27 +54,30 @@
                             </tr>
                         </thead> 
                         <tbody>
-                            <tr>
-                            <th scope="row">1</th>
-
-                            <td>12:00</td>
-                            <td>13:30</td>
-                            <td><button type="submit" class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
-                            </tr>
-                            <tr>
-                            <th scope="row">2</th>
-
-                            <td>16:00</td>
-                            <td>17:00</td>
-                            <td><button type="submit" class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
-                            </tr>
-                            <tr>
-                            <th scope="row">3</th>
-
-                            <td>18:00</td>
-                            <td>19:00</td>
-                            <td><button type="submit" class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
-                            </tr>
+                            <form action="profesional_meeting.php" method="post">
+                                <tr>
+                                <th scope="row">1</th>
+                                <td>12:00</td>
+                                <td>13:30</td>
+                                <td><button type="submit" name="client" value=<?php echo "'".$parameters['client']."'" ?> class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
+                                </tr>
+                            </form>
+                            <form action="profesional_meeting.php" method="post">
+                                <tr>
+                                <th scope="row">2</th>
+                                <td>16:00</td>
+                                <td>17:00</td>
+                                <td><button type="submit" name="client" value=<?php echo "'".$parameters['client']."'" ?> class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
+                                </tr>
+                            </form>
+                            <form action="profesional_meeting.php" method="post">
+                                <tr>
+                                <th scope="row">3</th>
+                                <td>18:00</td>
+                                <td>19:00</td>
+                                <td><button type="submit" name="client" value=<?php echo "'".$parameters['client']."'" ?> class="btn btn-sm btn-outline-secondary float-right">Ingresar</button></td>
+                                </tr>
+                            </form>
                         </tbody>
                     </table>
                     </div>
