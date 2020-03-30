@@ -33,9 +33,9 @@
                         <br>
                         <div class="iframe-container" style="overflow: hidden; padding-top: 56.25%; position: relative;">
 
-                        <!-- <iframe allow="microphone; camera" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;" 
-                        sandbox="allow-forms allow-scripts allow-same-origin" src="https://zoom.us/wc/2413279838/join?prefer=1&un=admin" frameborder="0"></iframe> -->
-                        
+                        <iframe allow="microphone; camera" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;" 
+                        sandbox="allow-forms allow-scripts allow-same-origin" src="https://zoom.us/wc/2413279838/join?prefer=1&un=admin" frameborder="0"></iframe>
+                        <br><br>
                         </div>
                         
                     </div>
